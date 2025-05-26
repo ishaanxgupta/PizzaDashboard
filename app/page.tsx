@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Pizza, Loader2 } from "lucide-react"
-import Loader from "@/components/custom/loader"
+// import Loader from "@/components/custom/loader"
 
 export default function LoginPage() {
   const { data: session, status } = useSession()
@@ -32,10 +32,10 @@ export default function LoginPage() {
 
   if (status === "loading") {
     return (
-      // <div className="min-h-screen flex items-center justify-center">
-      //   <Loader2 className="h-8 w-8 animate-spin" />
-      // </div>
-      <Loader />
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+      // <Loader />
     )
   }
 
